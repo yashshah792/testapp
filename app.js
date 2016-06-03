@@ -25,6 +25,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
+
 app.get("/",function(req,res){
 	res.render('index');  //i am sending file to client browser which is of html
 
